@@ -1,4 +1,8 @@
 class Product < ActiveRecord::Base
+
+  #默认使用title进行排序
+  #default_scope {where(order:'title')}
+
   validates :title, :description, :image_url, :presence => true
 
   validates :title, :uniqueness => true, :length => {:minimum => 10}
