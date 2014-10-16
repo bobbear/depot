@@ -21,6 +21,10 @@
     </div>
     <!-- end of side -->
     <div id='main'>
+      <!-- 当大于5的时候再显示这个信息 -->
+      <% if !session[:counter].nil? && session[:counter] > 5 %>
+          <div>您当前访问的次数为<%= session[:counter]%>次</div>
+      <% end %>
       <%= yield %>
     </div>
     <!-- end of main -->

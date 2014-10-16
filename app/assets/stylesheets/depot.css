@@ -104,6 +104,10 @@
   position: relative;
 }
 
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+
 #store .entry  .price {
   color: #44a;
   font-weight: bold;
