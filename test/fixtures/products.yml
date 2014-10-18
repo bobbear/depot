@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
 
 two:
+  id: 2
   title: MyString
   description: MyText
   image_url: MyString

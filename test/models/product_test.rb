@@ -48,6 +48,11 @@ class ProductTest < ActiveSupport::TestCase
     assert product.invalid?
   end
 
+  test "product title must be unique" do 
+    product = Product.new(:title => products(:ruby).title,:description=>'abc',:price=>20,:image_url=>'a.jpg')
+    assert product.invalid?
+  end
+
   def new_product(image_url)
     Product.new(
                 :title  => 'aTitle about aBook',
