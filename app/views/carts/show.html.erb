@@ -1,6 +1,17 @@
-<h2>你的购物车</h2>
-<ul>
+<h2 class='cart_title'>你的购物车</h2>
+<table>
   <% @cart.line_items.each do |line_item| %>
-    <li><%= line_item.product.title %></li>
+    <tr>
+      <td><%= line_item.product.title %></td>
+      <td><%= line_item.quantity %></td>
+      <td class='item_price'><%= number_to_currency(line_item.product.price) %></td>
+    </tr>
   <% end %>
-</ul>
+  <!-- total -->
+  <tr class='total_line'>
+    <td></td>
+    <td>total</td>
+    <td class='total_cell'><%= number_to_currency(@cart.price) %></td>
+  </tr>
+</table>
+<%= button_to '清空购物车', @cart, method: :delete, data: {confirm:'确定要清空购物车吗?'} %>

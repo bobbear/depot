@@ -26,7 +26,7 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.line_items.build(:product => product )
+    @line_item = @cart.add_product(product.id)
     session[:counter] = 0 #reset the counter when go in to the cart page 
 
     respond_to do |format|
