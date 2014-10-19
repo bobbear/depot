@@ -15,7 +15,9 @@
     <div id='side'>
         <!-- cart -->
         <% if @cart %>
-            <%= render @cart %>
+            <div id='cart'>
+                <%= render @cart %>
+            </div>
         <% end %>
         <!-- end of cart -->
         <a><%= Time.new.strftime("%Y-%m-%d %H:%M:%S") %></a><br>
