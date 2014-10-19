@@ -31,10 +31,12 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: '定单创建成功！' }
+        format.html { redirect_to store_url }
+        format.js
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
+        format.js
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end
@@ -60,7 +62,7 @@ class LineItemsController < ApplicationController
     cart = @line_item.cart
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to cart_url(cart), notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to store_url, notice: 'Line item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

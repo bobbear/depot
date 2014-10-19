@@ -8,11 +8,16 @@
 </head>
 <body id='store'>
   <div id='banner'>
-    <%= image_tag("logo.png") %>
+    <%= image_tag("logo.png", size: '42x42') %>
     <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
   <div id='columns'>
     <div id='side'>
+        <!-- cart -->
+        <% if @cart %>
+            <%= render @cart %>
+        <% end %>
+        <!-- end of cart -->
         <a><%= Time.new.strftime("%Y-%m-%d %H:%M:%S") %></a><br>
         <a href=''>Home</a><br>
         <a href=''>Questions</a><br>

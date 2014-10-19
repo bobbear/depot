@@ -1,11 +1,1 @@
-<h2 class='cart_title'>你的购物车</h2>
-<table>
-  <%= render(@cart.line_items) %>
-  <!-- total -->
-  <tr class='total_line'>
-    <td></td>
-    <td>total</td>
-    <td class='total_cell'><%= number_to_currency(@cart.price) %></td>
-  </tr>
-</table>
-<%= button_to '清空购物车', @cart, method: :delete, data: {confirm:'确定要清空购物车吗?'} %>
+<%= render @cart %>
