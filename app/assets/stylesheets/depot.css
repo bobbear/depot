@@ -171,3 +171,15 @@ color: #bfb; font-size: small;
 #cart table {
   border-top: 1px dotted #595; border-bottom: 1px dotted #595; margin-bottom: 10px;
 }
+
+/* Styles ofr order form */
+.depot_form fieldset {
+  baskground: #efe;
+}
+.depot_form legend {
+  color: #dfd;
+  background: #141;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+
