@@ -23,13 +23,24 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true  
   config.action_mailer.default :charset => "utf-8"  
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.smtp_settings = {
-    :address => 'smtp.gmail.com',
-    :port => 587,
-    :domain => 'gmail.com',
+  #gmail的配置
+  #config.action_mailer.smtp_settings = {
+  #  :address => 'smtp.gmail.com',
+  #  :port => 587,
+  #  :domain => 'gmail.com',
+  #  :authentication => :plain,
+  #  :user_name => 'bo6bear@gmail.com',
+  #  :password => 'Albert1984',
+  #  :enable_starttls_auto => true
+  #}
+  #163的邮箱配置
+  config.action_mailer.smtp_settings =  {
+    :address => 'smtp.vip.163.com',
+    :port =>25,
+    :domain => '163.com',
     :authentication => :plain,
-    :user_name => 'bo6bear@gmail.com',
-    :password => 'Albert1984',
+    :user_name => 'zhangwy@vip.163.com',
+    :password => 'Fighting2014',
     :enable_starttls_auto => true
   }
 
